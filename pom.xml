@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.lohrfink</groupId>
+    <artifactId>lfet-assembly-dependabot</artifactId>
+    <version>2.3.0</version>
+
+    <description>LF-ET - The Decision Table Tool - Made by LOHRFINK ® - Active Dependency-Control</description>
+    <url>https://www.lohrfink.de/en/solutions/lf-et/</url>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.26.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.16.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+        <!-- used by project lf-base, lf-lfet -->
+        <!-- License? SPDX-SBOM: "licenseDeclared" : "NOASSERTION" -->
+        <!-- License name in maven central: Plexus (https://github.com/dom4j/dom4j/blob/master/LICENSE)  -->
+        <!-- SPDX License short identifier: Plexus (https://spdx.org/licenses/Plexus.html) -->
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>2.1.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.help/javahelp -->
+        <!-- License? SPDX-SBOM: "licenseDeclared" : "NOASSERTION" -->
+        <!-- License name in maven central: GNU General Public License - Version 2 with the class path exception -->
+        <!-- SPDX License short identifier GPL-2.0-with-classpath-exception -->
+        <dependency>
+            <groupId>javax.help</groupId>
+            <artifactId>javahelp</artifactId>
+            <version>2.0.05</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+        <!-- used by project lf-embedded-server -->
+        <!-- License? SPDX-SBOM: "licenseDeclared" : "NOASSERTION" -->
+        <!-- License name in maven central: The MIT License (https://jsoup.org/license) -->
+        <!-- SPDX License short identifier: MIT (https://spdx.org/licenses/MIT.html) -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.18.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>de.lohrfink</groupId>-->
+<!--            <artifactId>lfet</artifactId>-->
+<!--            <version>${lfet-version}</version>-->
+<!--            <exclusions>-->
+<!--                &lt;!&ndash; exclude all dependencies, because they all are defined here in this pom individually &ndash;&gt;-->
+<!--                <exclusion>-->
+<!--                    <groupId>*</groupId>-->
+<!--                    <artifactId>*</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>de.lohrfink</groupId>-->
+<!--            <artifactId>lfet-help-de</artifactId>-->
+<!--            <version>${lfet-version}</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>de.lohrfink</groupId>-->
+<!--            <artifactId>lfet-help-en</artifactId>-->
+<!--            <version>${lfet-version}</version>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.23.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.plantuml/plantuml-asl  -->
+        <!-- used by project lf-plantuml -->
+        <!-- License? SPDX-SBOM: "licenseDeclared" : "NOASSERTION" -->
+        <!-- License name in maven central: ASL License (https://opensource.org/license/apache-2-0/) -->
+        <!-- SPDX License short identifier: Apache-2.0 (https://spdx.org/licenses/Apache-2.0.html) -->
+        <dependency>
+            <groupId>net.sourceforge.plantuml</groupId>
+            <artifactId>plantuml-asl</artifactId>
+            <version>1.2024.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.3.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.3.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-lite</artifactId>
+            <version>5.3.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.prefuse/prefuse (https://github.com/prefuse/Prefuse) -->
+        <!-- used by project lf-prefuse -->
+        <!-- License? SPDX-SBOM: "licenseDeclared" : "NOASSERTION" -->
+        <!-- License name in maven central: BSD License (https://github.com/prefuse/Prefuse/blob/master/license-prefuse.txt) -->
+        <!-- SPDX License short identifier: ??? -->
+        <dependency>
+            <groupId>org.prefuse</groupId>
+            <artifactId>prefuse</artifactId>
+            <version>beta-20071021</version>
+            <!-- the url in the pom has been modified manually in this local repository to point to the current valid project source -->
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/de.sciss/prefuse-core -->
+        <!--        <dependency>-->
+        <!--            &lt;!&ndash; funktioniert nicht wie das original&ndash;&gt;-->
+        <!--            <groupId>de.sciss</groupId>-->
+        <!--            <artifactId>prefuse-core</artifactId>-->
+        <!--            <version>1.0.3</version>-->
+        <!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>SparseBitSet</artifactId>
+            <version>1.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xmlbeans</groupId>
+            <artifactId>xmlbeans</artifactId>
+            <version>5.2.1</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
